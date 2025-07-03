@@ -1,5 +1,6 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Link from './Link';
+import { Menu, X } from 'lucide-react';
 
 const navigationData = [
   { id: 1, name: 'Home', path: '/' },
@@ -10,13 +11,36 @@ const navigationData = [
 ];
 
 const Navbar = () => {
+  const [open, setOpen] = useState(false);
+
+  const links = navigationData.map(route => (
+    <Link route={route} key={route.id}></Link>
+  ));
   return (
-    <nav>
-      <ul className="flex">
-        {navigationData.map(route => (
-          <Link route={route} key={route.id}></Link>
-        ))}
+    <nav className="flex justify-between items-center mx-10 relative mt-4">
+      <span className="flex" onClick={() => setOpen(!open)}>
+        {open ? (
+          <X className="md:hidden"></X>
+        ) : (
+          <Menu className="md:hidden"></Menu>
+        )}
+
+        {/* Removed this line to fix small screen showing links always */}
+        {/* <ul className="md:hidden">{links}</ul> */}
+
+        <h3 className="ml-4">My Navbar</h3>
+      </span>
+
+      <ul
+        className={`md:hidden absolute duration-1000 text-black bg-amber-200 ${
+          open ? 'top-8' : '-top-40'
+        }`}
+      >
+        {links}
       </ul>
+
+      {/* ✅ Add this for large screens */}
+      <ul className="hidden md:flex">{links}</ul>
 
       {/* <ul className="flex">
         {navigationData.map(route => (
@@ -37,6 +61,8 @@ const Navbar = () => {
           <a href="/blog">Blog</a>
         </li>
       </ul> */}
+
+      <button>Sign in</button>
     </nav>
   );
 };
