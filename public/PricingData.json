@@ -1,0 +1,43 @@
+[
+  {
+    "id": 0,
+    "name": "Basic",
+    "price": "$20/month",
+    "description": "Ideal for beginners starting their fitness journey.",
+    "features": [
+      "Access to gym equipment",
+      "1 group fitness class per week",
+      "Locker room access",
+      "Free Wi-Fi",
+      "Access during staffed hours"
+    ]
+  },
+
+  {
+    "id": 1,
+    "name": "Premium",
+    "popular": true,
+    "price": "$70/month",
+    "description": "For fitness enthusiasts who want it all.",
+    "features": [
+      "All Standard features",
+      "Unlimited personal training sessions",
+      "Access to premium equipment and studios",
+      "Priority class booking",
+      "Guest passes (5 per month)"
+    ]
+  },
+  {
+    "id": 2,
+    "name": "Family",
+    "price": "$90/month",
+    "description": "Gym access for the whole family with extra perks.",
+    "features": [
+      "All Premium features for up to 4 family members",
+      "Kids’ fitness classes",
+      "Family locker rooms",
+      "Discount on nutrition products",
+      "Family wellness events"
+    ]
+  }
+]

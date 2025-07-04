@@ -16,6 +16,7 @@ const Navbar = () => {
   const links = navigationData.map(route => (
     <Link route={route} key={route.id}></Link>
   ));
+
   return (
     <nav className="flex justify-between items-center mx-10 relative mt-4">
       <span className="flex" onClick={() => setOpen(!open)}>
@@ -24,9 +25,6 @@ const Navbar = () => {
         ) : (
           <Menu className="md:hidden"></Menu>
         )}
-
-        {/* Removed this line to fix small screen showing links always */}
-        {/* <ul className="md:hidden">{links}</ul> */}
 
         <h3 className="ml-4">My Navbar</h3>
       </span>
@@ -40,6 +38,7 @@ const Navbar = () => {
       </ul>
 
       {/* ✅ Add this for large screens */}
+
       <ul className="hidden md:flex">{links}</ul>
 
       {/* <ul className="flex">
