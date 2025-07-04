@@ -1,0 +1,47 @@
+[
+  {
+    "id": 101,
+    "name": "Alice Johnson",
+    "marks": {
+      "Physics": 85,
+      "Chemistry": 92,
+      "Math": 78
+    }
+  },
+  {
+    "id": 102,
+    "name": "Bob Smith",
+    "marks": {
+      "Physics": 74,
+      "Chemistry": 81,
+      "Math": 88
+    }
+  },
+  {
+    "id": 103,
+    "name": "Charlie Brown",
+    "marks": {
+      "Physics": 90,
+      "Chemistry": 87,
+      "Math": 91
+    }
+  },
+  {
+    "id": 104,
+    "name": "Diana Evans",
+    "marks": {
+      "Physics": 68,
+      "Chemistry": 75,
+      "Math": 80
+    }
+  },
+  {
+    "id": 105,
+    "name": "Ethan Wright",
+    "marks": {
+      "Physics": 95,
+      "Chemistry": 89,
+      "Math": 94
+    }
+  }
+]
